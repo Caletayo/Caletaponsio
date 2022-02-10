@@ -2,11 +2,11 @@
    "token": "ODI0OTkxNjgxNDMzNTY3Mjgz.YF3bYA.gzsXJloscIFuMayCqB5rAM0ka7M",
    "prefix": "c!",
    "ownerIDS": [
-      "760938184661008455"
+      "862621966317912084"
    ],
    "status": {
-      "text": "{prefix}help | reproducidas {songsplayed} Canciones en {guildcount} Servidores",
-      "text2": "Proporcionado por Caletaponsio",
+      "text": "{prefix}help | Se han reproducido {songsplayed} Canciones en {guildcount} Servidores",
+      "text2": "Hosteado por Heroku.com",
       "type": "PLAYING",
       "url": "https://twitch.tv/#"
    },
@@ -19,8 +19,9 @@
          }
       ]
    },
+
    "spotify": {
-      "clientID": "b5fbc843970b465ca9541905f77d7e9e",
-      "clientSecret": "015794821d7745a5a751e92602787754"
+      "clientID": "82853ecb2c7541bb9402c96ce7bad96c",
+      "clientSecret": "5691e4b5957948199034a55a6006ab2f"
    }
 }

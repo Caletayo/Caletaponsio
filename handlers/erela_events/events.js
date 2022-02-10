@@ -42,8 +42,8 @@ module.exports = (client) => {
           client.logger(`Autoresume`.brightCyan + ` - Bot got Kicked out of the Guild`)
           continue;
         }
-        var data = client.autoresume.get(gId);
-        if(!data) continue;
+        let data = client.autoresume.get(gId);
+
 
         let voiceChannel = guild.channels.cache.get(data.voiceChannel);
         if (!voiceChannel) voiceChannel = await guild.channels.fetch(data.voiceChannel).catch(() => {}) || false;
@@ -392,7 +392,7 @@ module.exports = (client) => {
             filtervalue: null,
             autoplay: null,
           });
-          var data = client.autoresume.get(pl.guild);
+          let data = client.autoresume.get(pl.guild);
           if (data.guild != pl.guild) client.autoresume.set(pl.guild, pl.guild, `guild`)
           if (data.voiceChannel != pl.voiceChannel) client.autoresume.set(pl.guild, pl.voiceChannel, `voiceChannel`)
           if (data.textChannel != pl.textChannel) client.autoresume.set(pl.guild, pl.textChannel, `textChannel`)
@@ -462,11 +462,12 @@ module.exports = (client) => {
         let edited = false;
         let guild = client.guilds.cache.get(player.guild);
         if (!guild) return;
-        const es = client.settings.get(guild.id, "embed")
-        const ls = client.settings.get(guild.id, "language")
-  
+
         let channel = guild.channels.cache.get(player.textChannel);
         if (!channel) channel = await guild.channels.fetch(player.textChannel);
+
+        let es = client.settings.get(player.guild, `embed`);
+        let ls = client.settings.get(player.guild, `language`);
 
         if (playercreated.has(player.guild)) {
           player.set(`eq`, player.get("eq") || `💣 None`);
@@ -498,7 +499,7 @@ module.exports = (client) => {
                 new MessageEmbed().setColor(es.color)
                 .setDescription(`> 👍 **Joined** <#${player.voiceChannel}>\n\n> 📃 **And bound to** <#${player.textChannel}>`)
                 .setTimestamp()
-                .setFooter(client.getFooter(es))
+                .setFooter(es.footertext, es.footericon)
               ]
             })
           }
@@ -540,10 +541,9 @@ module.exports = (client) => {
             return msg;
           })
           //create a collector for the thinggy
-          var defaulttime = 1 * 60 * 60 * 1000; //set a default time (1 hour in this case)
           collector = swapmsg.createMessageComponentCollector({
             filter: (i) => i.isButton() && i.user && i.message.author.id == client.user.id,
-            time: track.duration > 0 ? track.duration < Number.MAX_VALUE ? track.duration : defaulttime : defaulttime
+            time: track.duration > 0 ? track.duration : 600000
           }); //collector for 5 seconds
           //array of all embeds, here simplified just 10 embeds with numbers 0 - 9
           collector.on('collect', async i => {
@@ -574,8 +574,8 @@ module.exports = (client) => {
             if (i.customId != `10` && check_if_dj(client, i.member, player.queue.current)) {
               return i.reply({
                 embeds: [new MessageEmbed()
-                  .setColor(es.wrongcolor)
-                  .setFooter(client.getFooter(es))
+                  .setColor(ee.wrongcolor)
+                  .setFooter(ee.footertext, ee.footericon)
                   .setTitle(`❌ **You are not a DJ and not the Song Requester!**`)
                   .setDescription(`**DJ-ROLES:**\n${check_if_dj(client, i.member, player.queue.current)}`)
                 ],
@@ -592,12 +592,12 @@ module.exports = (client) => {
                 if (player.get(`autoplay`)) return autoplay(client, player, `skip`);
                 i.reply({
                   embeds: [new MessageEmbed()
-                    .setColor(es.color)
+                    .setColor(ee.color)
                     .setTimestamp()
                     .setTitle(`⏹ **Stopped playing and left the Channel**`)
-                    .setFooter(client.getFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
+                    .setFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
                       dynamic: true
-                    })))
+                    }))
                   ]
                 })
                 edited = true;
@@ -608,12 +608,12 @@ module.exports = (client) => {
               player.stop();
               return i.reply({
                 embeds: [new MessageEmbed()
-                  .setColor(es.color)
+                  .setColor(ee.color)
                   .setTimestamp()
                   .setTitle(`⏭ **Skipped to the next Song!**`)
-                  .setFooter(client.getFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
+                  .setFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
                     dynamic: true
-                  })))
+                  }))
                 ]
               })
             }
@@ -625,12 +625,12 @@ module.exports = (client) => {
               //Stop the player
               i.reply({
                 embeds: [new MessageEmbed()
-                  .setColor(es.color)
+                  .setColor(ee.color)
                   .setTimestamp()
                   .setTitle(`⏹ **Stopped playing and left the Channel**`)
-                  .setFooter(client.getFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
+                  .setFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
                     dynamic: true
-                  })))
+                  }))
                 ]
               })
               edited = true;
@@ -645,12 +645,12 @@ module.exports = (client) => {
                 player.pause(false);
                 i.reply({
                   embeds: [new MessageEmbed()
-                    .setColor(es.color)
+                    .setColor(ee.color)
                     .setTimestamp()
                     .setTitle(`▶️ **Resumed!**`)
-                    .setFooter(client.getFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
+                    .setFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
                       dynamic: true
-                    })))
+                    }))
                   ]
                 })
               } else {
@@ -659,12 +659,12 @@ module.exports = (client) => {
 
                 i.reply({
                   embeds: [new MessageEmbed()
-                    .setColor(es.color)
+                    .setColor(ee.color)
                     .setTimestamp()
                     .setTitle(`⏸ **Paused!**`)
-                    .setFooter(client.getFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
+                    .setFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
                       dynamic: true
-                    })))
+                    }))
                   ]
                 })
               }
@@ -686,12 +686,12 @@ module.exports = (client) => {
               })
               i.reply({
                 embeds: [new MessageEmbed()
-                  .setColor(es.color)
+                  .setColor(ee.color)
                   .setTimestamp()
                   .setTitle(`${player.get(`autoplay`) ? `<a:yes:833101995723194437> **Enabled Autoplay**`: `❌ **Disabled Autoplay**`}`)
-                  .setFooter(client.getFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
+                  .setFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
                     dynamic: true
-                  })))
+                  }))
                 ]
               })
             }
@@ -706,12 +706,12 @@ module.exports = (client) => {
               //Send Success Message
               i.reply({
                 embeds: [new MessageEmbed()
-                  .setColor(es.color)
+                  .setColor(ee.color)
                   .setTimestamp()
                   .setTitle(`🔀 **Shuffled ${player.queue.length} Songs!**`)
-                  .setFooter(client.getFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
+                  .setFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
                     dynamic: true
-                  })))
+                  }))
                 ]
               })
             }
@@ -727,12 +727,12 @@ module.exports = (client) => {
               player.setTrackRepeat(!player.trackRepeat);
               i.reply({
                 embeds: [new MessageEmbed()
-                  .setColor(es.color)
+                  .setColor(ee.color)
                   .setTimestamp()
                   .setTitle(`${player.trackRepeat ? `<a:yes:833101995723194437> **Enabled Song Loop**`: `❌ **Disabled Song Loop**`}`)
-                  .setFooter(client.getFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
+                  .setFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
                     dynamic: true
-                  })))
+                  }))
                 ]
               })
               var data = generateQueueEmbed(client, player, track)
@@ -752,12 +752,12 @@ module.exports = (client) => {
               player.setQueueRepeat(!player.queueRepeat);
               i.reply({
                 embeds: [new MessageEmbed()
-                  .setColor(es.color)
+                  .setColor(ee.color)
                   .setTimestamp()
                   .setTitle(`${player.queueRepeat ? `<a:yes:833101995723194437> **Enabled Queue Loop**`: `❌ **Disabled Queue Loop**`}`)
-                  .setFooter(client.getFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
+                  .setFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
                     dynamic: true
-                  })))
+                  }))
                 ]
               })
               var data = generateQueueEmbed(client, player, track)
@@ -782,12 +782,12 @@ module.exports = (client) => {
               })
               i.reply({
                 embeds: [new MessageEmbed()
-                  .setColor(es.color)
+                  .setColor(ee.color)
                   .setTimestamp()
                   .setTitle(`⏩ **Forwarded the song for \`10 Seconds\`!**`)
-                  .setFooter(client.getFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
+                  .setFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
                     dynamic: true
-                  })))
+                  }))
                 ]
               })
             }
@@ -806,12 +806,12 @@ module.exports = (client) => {
               })
               i.reply({
                 embeds: [new MessageEmbed()
-                  .setColor(es.color)
+                  .setColor(ee.color)
                   .setTimestamp()
                   .setTitle(`⏪ **Rewinded the song for \`10 Seconds\`!**`)
-                  .setFooter(client.getFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
+                  .setFooter(`💢 Action by: ${member.user.tag}`, member.user.displayAvatarURL({
                     dynamic: true
-                  })))
+                  }))
                 ]
               })
             }
@@ -890,13 +890,12 @@ module.exports = (client) => {
 
 
 function generateQueueEmbed(client, player, track) {
-  const es = player.guild ? client.settings.get(player.guild, "embed") : ee;
-  var embed = new MessageEmbed().setColor(es.color)
-  embed.setAuthor(client.getAuthor(`${track.title}`, `https://images-ext-1.discordapp.net/external/DkPCBVBHBDJC8xHHCF2G7-rJXnTwj_qs78udThL8Cy0/%3Fv%3D1/https/cdn.discordapp.com/emojis/859459305152708630.gif`, track.uri))
+  var embed = new MessageEmbed().setColor(ee.color)
+  embed.setAuthor(`${track.title}`, `https://images-ext-1.discordapp.net/external/DkPCBVBHBDJC8xHHCF2G7-rJXnTwj_qs78udThL8Cy0/%3Fv%3D1/https/cdn.discordapp.com/emojis/859459305152708630.gif`, track.uri)
   embed.setThumbnail(`https://img.youtube.com/vi/${track.identifier}/mqdefault.jpg`)
-  embed.setFooter(client.getFooter(`Requested by: ${track.requester.tag}`, track.requester.displayAvatarURL({
+  embed.setFooter(`Requested by: ${track.requester.tag}`, track.requester.displayAvatarURL({
     dynamic: true
-  })));
+  }));
   let skip = new MessageButton().setStyle('PRIMARY').setCustomId('1').setEmoji(`⏭`).setLabel(`Skip`)
   let stop = new MessageButton().setStyle('DANGER').setCustomId('2').setEmoji(`🏠`).setLabel(`Stop`)
   let pause = new MessageButton().setStyle('SECONDARY').setCustomId('3').setEmoji('⏸').setLabel(`Pause`)

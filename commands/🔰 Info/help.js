@@ -20,7 +20,7 @@ module.exports = {
   type: "bot",
   run: async (client, message, args, cmduser, text, prefix, player, es, ls) => {
     if (args[0]) {
-      const embed = new MessageEmbed().setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null);
+      const embed = new MessageEmbed().setColor(es.color).setThumbnail(es.thumb ? es.footericon : null);
       const cmd = client.commands.get(args[0].toLowerCase()) || client.commands.get(client.aliases.get(args[0].toLowerCase()));
       var cat = false;
       if (!cmd) {
@@ -36,10 +36,10 @@ module.exports = {
         var category = cat;
         const items = client.commands.filter((cmd) => cmd.category === category).map((cmd) => `\`${cmd.name}\``);
         const embed = new MessageEmbed()
-          .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
+          .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
           .setThumbnail(client.user.displayAvatarURL())
           .setTitle(`💿 Detailed Information about: \`${cat.name}\``)
-          .setFooter(client.getFooter("No Custom Information for ", client.user.displayAvatarURL()));
+          .setFooter("No Custom Information for ", client.user.displayAvatarURL());
         let embeds = allotherembeds_eachcategory();
         if (cat == "🔰 Info")
           return message.reply({
@@ -80,7 +80,7 @@ module.exports = {
       else embed.addField("**💿 Default-Cooldown**", `\`\`\`1 Second\`\`\``);
       if (cmd.usage) {
         embed.addField("**💿 Usage**", `\`\`\`${prefix}${cmd.usage}\`\`\``);
-        embed.setFooter(client.getFooter("Syntax: <> = required, [] = optional", es.footericon));
+        embed.setFooter("Syntax: <> = required, [] = optional", ee.footericon);
       }
       return message.reply({
         embeds: [embed]
@@ -89,7 +89,7 @@ module.exports = {
       let button_back = new MessageButton().setStyle('SUCCESS').setCustomId('1').setEmoji("833802907509719130").setLabel(handlemsg(client.la[ls].cmds.info.help.buttons.back))
       let button_home = new MessageButton().setStyle('DANGER').setCustomId('2').setEmoji("🏠").setLabel(handlemsg(client.la[ls].cmds.info.help.buttons.home))
       let button_forward = new MessageButton().setStyle('SUCCESS').setCustomId('3').setEmoji('832598861813776394').setLabel(handlemsg(client.la[ls].cmds.info.help.buttons.forward))
-      let button_tutorial = new MessageButton().setStyle('LINK').setEmoji("840260133686870036").setLabel("Tutorial").setURL("https://youtu.be/E0R7d8gS908")
+      let button_tutorial = new MessageButton().setStyle('LINK').setEmoji("840260133686870036").setLabel("Tutorial").setURL("https://youtube.com")
       let menuOptions = [{
           label: "Overview",
           value: "Overview",
@@ -144,8 +144,8 @@ module.exports = {
       const allbuttons = [buttonRow, SelectionRow]
       //define default embed
       let OverviewEmbed = new MessageEmbed()
-        .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
-        .setFooter(client.getFooter("Page Overview\n" + client.user.username, client.user.displayAvatarURL()))
+        .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
+        .setFooter("Page Overview\n" + client.user.username, client.user.displayAvatarURL())
         .setTitle(`Information about __${client.user.username}__`)
         .addField(":muscle: **__My Features__**",
           `>>> :notes: An advanced <:Spotify:846090652231663647> **Music System** with **Audio Filtering**
@@ -268,11 +268,10 @@ but you can also do \`${prefix}play <SONGNAME/SONGLINK>\` without setting it up!
         }
       });
 
+      //array of all disabled buttons
+      let d_buttonRow = new MessageActionRow().addComponents([button_back.setDisabled(true), button_home.setDisabled(true), button_forward.setDisabled(true), button_tutorial])
+      const alldisabledbuttons = [d_buttonRow]
       collector.on('end', collected => {
-        //array of all disabled buttons
-        let d_buttonRow = new MessageActionRow().addComponents([button_back.setDisabled(true), button_home.setDisabled(true), button_forward.setDisabled(true), button_tutorial])
-        const alldisabledbuttons = [d_buttonRow]
-        
         if (!edited) {
           edited = true;
           helpmsg.edit({
@@ -345,8 +344,8 @@ but you can also do \`${prefix}play <SONGNAME/SONGLINK>\` without setting it up!
       return embeds.map((embed, index) => {
         return embed
           .setColor(es.color)
-          .setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
-          .setFooter(client.getFooter(`Page ${index + 1} / ${embeds.length}\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL()));
+          .setThumbnail(es.thumb ? es.footericon : null)
+          .setFooter(`Page ${index + 1} / ${embeds.length}\nTo see command Descriptions and Information, type: ${config.prefix}help [CMD NAME]`, client.user.displayAvatarURL());
       })
     }
 

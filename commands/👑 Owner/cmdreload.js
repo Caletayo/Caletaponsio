@@ -15,7 +15,7 @@ module.exports = {
       return message.channel.send({
         embeds: [new MessageEmbed()
           .setColor(es.wrongcolor)
-          .setFooter(client.user.username, es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL())
+          .setFooter(client.user.username, es.footericon)
           .setTitle(eval(client.la[ls]["cmds"]["owner"]["cmdreload"]["variable1"]))
         ]
       });
@@ -23,12 +23,11 @@ module.exports = {
       return message.channel.send({
         embeds: [new MessageEmbed()
           .setColor(es.wrongcolor)
-          .setFooter(client.getFooter(es))
+          .setFooter(es.footertext, es.footericon)
           .setTitle(eval(client.la[ls]["cmds"]["owner"]["cmdreload"]["variable2"]))
         ]
       });
     let reload = false;
-    let err = null;
     let thecmd = client.commands.get(args[0].toLowerCase()) || client.commands.get(client.aliases.get(args[0].toLowerCase()));
     if (thecmd) {
       for (let i = 0; i < client.categories.length; i += 1) {
@@ -39,15 +38,13 @@ module.exports = {
           const pull = require(`${process.cwd()}/commands/${dir}/${thecmd.name}.js`)
           client.commands.set(thecmd.name, pull)
           reload = true;
-        } catch (e){
-          err = e;
-        }
+        } catch {}
       }
     } else {
       return message.channel.send({
         embeds: [new MessageEmbed()
           .setColor(es.wrongcolor)
-          .setFooter(client.getFooter(es))
+          .setFooter(es.footertext, es.footericon)
           .setTitle(eval(client.la[ls]["cmds"]["owner"]["cmdreload"]["variable3"]))
         ]
       });
@@ -56,16 +53,16 @@ module.exports = {
       return message.channel.send({
         embeds: [new MessageEmbed()
           .setColor(es.color)
-          .setFooter(client.getFooter(es))
+          .setFooter(es.footertext, es.footericon)
           .setTitle(eval(client.la[ls]["cmds"]["owner"]["cmdreload"]["variable4"]))
         ]
       });
     return message.channel.send({
       embeds: [new MessageEmbed()
         .setColor(es.wrongcolor)
-        .setFooter(client.getFooter(es))
+        .setFooter(es.footertext, es.footericon)
         .setTitle(eval(client.la[ls]["cmds"]["owner"]["cmdreload"]["variable5"]))
-        .setDescription(`Cmd is now removed from the BOT COMMANDS!\n\`\`\`${String(err.message ? err.message : e).substr(0, 1900)}\`\`\``)
+        .setDescription(`Cmd is now removed from the BOT COMMANDS!`)
       ]
     });
   },

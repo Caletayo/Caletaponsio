@@ -17,7 +17,7 @@ module.exports = {
     //send information embed
     return message.reply({
       embeds: [new MessageEmbed()
-        .setFooter(client.getFooter(es))
+        .setFooter(es.footertext, es.footericon).setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
         .setTitle(eval(client.la[ls]["cmds"]["settings"]["autoresume"]["variable1"]))
         .setDescription(eval(client.la[ls]["cmds"]["settings"]["autoresume"]["variable2"]))
       ]

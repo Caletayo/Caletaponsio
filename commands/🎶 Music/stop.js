@@ -7,15 +7,14 @@ module.exports = {
   usage: `stop`,
   parameters: {
     "type": "music",
-    "activeplayer": false,
-    "check_dj": false,
+    "activeplayer": true,
+    "check_dj": true,
     "previoussong": false
   },
   type: "song",
   run: async (client, message, args, cmduser, text, prefix, player, es, ls) => {
     //stop playing
-    if(player && player.queue) player.destroy();
-    else if(message.guild.me.voice.channel) message.guild.me.voice.disconnect().catch(() => {});
+    player.destroy();
     //React with the emoji
     return message.react(emoji.react.stop).catch((e) => {})
   }

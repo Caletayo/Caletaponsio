@@ -7,7 +7,7 @@ module.exports = {
   name: `deployslash`,
   type: "info",
   category: `👑 Owner`,
-  aliases: ["deploy", "loadslash", "deployslashcommands", "deployslashcmds", "loadslashcommands", "loadslashcmds"],
+  aliases: [`deployslash`, "deploy", "loadslash", "deployslashcommands", "deployslashcmds", "loadslashcommands", "loadslashcmds"],
   description: `Deploy and Enable the Slash Commands of this Bot! Either GLOBALLY or for ONE GUILD ONLY`,
   usage: `deployslash [GUILDID]`,
   cooldown: 360,
@@ -16,7 +16,7 @@ module.exports = {
       return message.channel.send({
         embeds: [new MessageEmbed()
           .setColor(es.wrongcolor)
-          .setFooter(client.user.username, es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL())
+          .setFooter(client.user.username, es.footericon)
           .setTitle(eval(client.la[ls]["cmds"]["owner"]["leaveserver"]["variable1"]))
         ]
       });

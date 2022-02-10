@@ -53,8 +53,8 @@ module.exports = {
 
     await tempmsg.edit({
       embeds: [new MessageEmbed()
-        .setColor(es.color).setThumbnail(es.thumb ? es.footericon && (es.footericon.includes("http://") || es.footericon.includes("https://")) ? es.footericon : client.user.displayAvatarURL() : null)
-        .setFooter(client.getFooter(es))
+        .setColor(es.color).setThumbnail(es.thumb ? es.footericon : null)
+        .setFooter(es.footertext, es.footericon)
         .setTitle(handlemsg(client.la[ls].cmds.info.commandcount.title, {
           cmdcount: client.commands.size
         }) + ` | **[\`${client.slashCommands.size}\`] Slashcommands**`)

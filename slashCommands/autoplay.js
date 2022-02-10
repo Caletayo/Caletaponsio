@@ -22,7 +22,7 @@ module.exports = {
     if (!client.settings.get(message.guild.id, "MUSIC")) {
       return interaction.reply({ephemeral: true, embed : [new MessageEmbed()
         .setColor(es.wrongcolor)
-        .setFooter(client.getFooter(es))
+        .setFooter(es.footertext, es.footericon)
         .setTitle(client.la[ls].common.disabled.title)
         .setDescription(handlemsg(client.la[ls].common.disabled.description, {prefix: prefix}))
       ]});
