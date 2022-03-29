@@ -29,19 +29,6 @@
     "type": "git",
     "url": "git+https://github.com/Tomato6966/discord-js-lavalink-Music-Bot-erela-js.git"
   },
-  "keywords": [
-    "discord",
-    "discord.js",
-    "music",
-    "discord-bot",
-    "nodejs",
-    "erela-js",
-    "lavalink",
-    "buttons",
-    "menu",
-    "youtube",
-    "spotify"
-  ],
   "author": "Tomato#6966",
   "license": "MIT",
   "bugs": {
