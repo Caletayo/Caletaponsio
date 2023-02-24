@@ -2,127 +2,127 @@
     "cmds": {
         "info": {
             "botinfo": {
-                "loading": "Getting the Bot-Information-Data",
+                "loading": "obteniendo los datos de información del bot",
                 "field1": {
-                    "title": "💿 General -- Stats",
-                    "value": "```yml\nServers: {totalGuilds}\nUsers: {totalMembers}\nConnections: {connectedchannelsamount}```"
+                    "title": "💿 General -- Estadísticas",
+                    "value": "```yml\nServidores: {totalGuilds}\nUsers: {totalMembers}\nConnections: {canalesconectados}```"
                 },
                 "field2": {
                     "title": "💿 Bot -- Stats"
                 },
                 "field3": {
-                    "title": "💿 System -- Stats",
-                    "value": "```yml\nOS: Linux | Debian\nCPU Usage: {cpu} %\nRAM Usage: {ram} MB```"
+                    "title": "💿 Sistema -- Estadísticas",
+                    "value": "```yml\nOS: Linux | Debian\nUso de CPU: {cpu} %nRAM Usage: {ram} MB```"
                 },
                 "field4": {
-                    "title": "💿 Developer"
+                    "title": "💿 Desarrollador"
                 },
                 "field5": {
-                    "title": "💿 Important Links",
-                    "value": "**[Invite Link]({invitelink})・[Support Server](https://discord.gg/milrato)・[Website](https://milrato.dev)**\n**[Get Free Bots](https://discord.gg/milrato)・[Invite Public Version](https://discord.com/api/oauth2/authorize?client_id=734513783338434591&permissions=8&scope=bot)**"
+                    "title": "💿 Enlaces importantes",
+                    "value": "**[Enlace de invitación]({invitelink})・[Servidor de soporte](https://discord.gg/milrato)・[Página web](https://milrato.dev)**\n**[Consigue bots gratis](https://discord.gg/milrato)・[Invita a la versión pública](https://discord.com/api/oauth2/authorize?client_id=734513783338434591&permissions=8&scope=bot)**"
                 },
-                "variable1": "`\\`\\`\\`yml\\nName: ${client.user.tag} [${client.user.id}]\\nBot Latency: ${Math.round(Date.now() - message.createdTimestamp)}ms\\nApi Latency: ${Math.round(client.ws.ping)}ms\\nRuntime: ${duration(client.uptime).join(`︲`)}\\`\\`\\``",
+                "variable1": "`\\`\\`\\`yml\\nName: ${client.user.tag} [Latencia del robot: ${Math.round(Date.now() - message.createdTimestamp)}ms Latencia de la API: ${Math.round(client.ws.ping)}ms Tiempo de ejecución: ${duration(client.uptime).join(`︲`)}ms",
                 "variable2": "``"
             },
             "commandcount": {
-                "tempmsg": "GETTING BOT INFORMATION DATA",
-                "title": ":gear: **[`{cmdcount}`] Commands**",
-                "description": ":gear: **[`{catcount}`] Categories**\n:gear: **[`{lines}`] Lines of Code**\n<a:Valid_Code_Developer:858405056238714930> **[`{letters}`] Letters of Code**",
+                "tempmsg": "OBTENIENDO DATOS DE INFORMACIÓN DEL BOT",
+                "title": ":engranaje: **[`{cmdcount}`] Comandos**",
+                "description": ":gear: **[`{catcount}`] Categorías**n:gear: **[`{lines}`] Líneas de código**n<a:Valid_Code_Developer:858405056238714930> **[`{letters}`] Letras de código**",
                 "variable1": "``"
             },
-            "developer": {
+            "desarrollador": {
                 "buttons": {
-                    "invite": "Invite Public Version",
-                    "dc": "Get yourself a own Bot",
-                    "botlist": "Public Bot-List-Website"
+                    "invitar": "Invitar versión pública",
+                    "dc": "Consíguete un Bot propio",
+                    "botlist": "Bot-Lista-Sitio Público"
                 },
                 "title": "Tomato#6966 | Dev of 4 Orgs | Developer of 1200+ BOTS",
-                "description": "💿 Hello I am **Tomato** <@442355791412854784> *(`Tomato#6966`)*, and i made more then 1200 different Discord Bots: [My Bot List](https://botlist.milrato.dev)\n\n💿 I am very proud for all of my verified and not verified Discord Bots, but the Bot I am the most proud of is: [**LAVA MUSIC** | `2021's Best Music Bot`](https://lava.milrato.dev) <@742672021422342165>\n\n💿 I made this Bot, and you can get a free Bot too! Just go to: [My Service](https://dc.milrato)\n\n💿 I am also a **Website** Developer and **Plugin** dev. I made **Modules** like a **SPEECH Module** [SEE IT](https://cdn.discordapp.com/attachments/778714123785076768/801606374105546782/2021-01-21_01-15-50.mp4)\n\n💿 Yeah i hope you like my stuff :v: <3",
+                "description": "💿 Hola soy **Tomato** <@442355791412854784> *(`Tomato#6966`)*, y he hecho más de 1200 diferentes Bots de Discord: [My Bot List](https://botlist.milrato.dev)\n\n💿 Estoy muy orgulloso de todos mis Bots de Discord verificados y no verificados, pero el Bot del que estoy más orgulloso es: [**LAVA MUSIC** | `2021's Best Music Bot`](https://lava.milrato.dev) <@742672021422342165>\n\n💿 ¡Hice este Bot, y puedes conseguir un Bot gratis también! Sólo tienes que ir a: [Mi Servicio](https://dc.milrato)\n\n💿 Yo también soy un **Website** Desarrollador y **Plugin** dev. Hice **Modules** como un **SPEECH Module** [SEE IT](https://cdn.discordapp.com/attachments/778714123785076768/801606374105546782/2021-01-21_01-15-50.mp4)\n\n💿 Yeah i hope you like my stuff :v: <3",
                 "variable1": "``"
             },
             "help": {
                 "error1": "NO CUSTOM COMMANDS DEFINED YET, do it with: `setup-customcommands`",
-                "nocustom": "No custom information for the Custom Commands ;(",
-                "noinfo": "No Information found for the command **{command}**",
-                "footer": "To see command Descriptions and Information, type: {prefix}help [CMD NAME]",
+                "nocustom": "No hay información personalizada para los comandos personalizados ;(",
+                "noinfo": "No se ha encontrado información para el comando **{command}**",
+                "footer": "Para ver Descripciones e Información del comando, escriba: {prefix}help [NOMBRE DEL COMANDO]",
                 "detail": {
-                    "name": "**💿 Command name**",
-                    "desc": "**💿 Description**",
-                    "aliases": "**💿 Aliases**",
-                    "about": "💿 Detailed Information about: `{cmdname}`",
-                    "cooldown": "**💿 Cooldown**",
-                    "usage": "**💿 Usage**",
-                    "syntax": "Syntax: <> = required, [] = optional"
+                    "name": "**💿 Nombre del comando**",
+                    "desc": "**💿 Descripción**",
+                    "alias": "**💿 Alias**",
+                    "about": "💿 Información detallada sobre: `{cmdname}`",
+                    "cooldown": "**💿 Enfriamiento**",
+                    "usage": "**💿 Uso**",
+                    "syntax": "Sintaxis: <> = obligatorio, [] = opcional"
                 },
-                "buttons": {
-                    "home": "Home",
-                    "back": "Back",
-                    "forward": "Forward"
+                "botones": {
+                    "Inicio": "Inicio",
+                    "atrás": "Atrás",
+                    "adelante": "Adelante"
                 },
-                "overview": {
-                    "title": ":gear: **__Command Category Overview__**",
-                    "desc": "> 👍 ... **Overview**\n\n> 🔰 ... **Information**\n> 🎶 ... **Music Related**\n> ⚙ ... **Settings & 👑 Owner & ⌨️Programming**\n> 🎤 ... **Voice & 📈 Ranking**\n> 🎮 ... **Mini Games & 🕹️ Fun**\n> 🚫 ... **Administration & 💪 Setup**\n> 🔞 ... **NSFW**\n> 🦾 ... **Custom Commands**\n\n> *Click on the Button Emojis to jump to the Command Category*\n> *Use the Arrows to swap the Pages forward/backward/jump-back-home*"
+                "visión general": {
+                    "title": ":engranaje: **__Descripción general de la categoría de comandos__**",
+                    "desc": "> 👍 ... **Visión general**n> 🔰 ... **Información**n> 🎶 ... **Relacionado con la música**n> ⚙ ... **Configuración & 👑 Propietario & ⌨️Programming**\n> 🎤 ... **Voz & 📈 Ranking**\n> 🎮 ... **Mini Juegos & 🕹️ Diversión**\n> 🚫 ... **Administración & 💪 Configuración**n> 🔞 ... ... **NSFW**n> 🦾 ... **Comandos Personalizados**\n> *Haga clic en los Emojis de los Botones para saltar a la Categoría de Comandos*\n> *Use las Flechas para cambiar las Páginas hacia adelante/atrás/salto-atrás*"
                 },
-                "buttonerror": "❌ **Only the one who typed {prefix}help is allowed to react!**",
-                "timeended": "Time has ended type {prefix}help again!",
-                "variable1": "`🦾 **Custom Commands [${cuc[0].includes(`NO`) ? 0 : items.length}]**`",
+                "buttonerror": "❌ **¡Sólo el que tecleó {prefix}help puede reaccionar!**",
+                "timeended": "¡El tiempo ha terminado teclea {prefijo}ayuda otra vez!",
+                "variable1": "`🦾 **Comandos personalizados [${cuc[0].includes(`NO`) ? 0 : items.length}]**`",
                 "variable2": "`HELP-MENU 🔰 **${category.toUpperCase()} [${items.length}]**`",
-                "variable3": "`**${category.toUpperCase()} [${items.length}]**`, `> \\`${items[0]}\\`\\n\\n**Usage:**\\n> \\`${cmd.usage}\\``",
+                "variable3": "`**${category.toUpperCase()} [${items.length}]**`, `> \\\$`${items[0]}\$`\n\n**Usage:**\\n> \\${cmd.usage}\\``",
                 "variable4": "`${items.join(`︲`)}`",
-                "variable5": "`Information about: __**${client.user.username}**__`"
+                "variable5": "`Información sobre: __**${client.user.username}**__`"
                },
             "invite": {
-                "title": "Click here to invite me",
+                "title": "Haz clic aquí para invitarme",
                 "buttons": {
-                    "public": "Invite Public Bot",
-                    "server": "Support Server",
-                    "bot": "Invite this Bot"
+                    "public": "Invitar a bot público",
+                    "server": "Servidor de soporte",
+                    "bot": "Invitar a este Bot"
                 },
                 "variable1": "``"
             },
             "ping": {
-                "m1": ":heartbeat: Testing Connection Speed ...",
-                "m2": ":robot: Bot Ping: `{botping}ms`\n\n:stopwatch: Host Ping: `{ping}`\n\n:hourglass: Api Latency: `{wsping}ms`",
+                "m1": ":heartbeat: Probando velocidad de conexión ...",
+                "m2": ":robot: Bot Ping: `{botping}ms`\n\n:cronómetro: Host Ping: `{ping}`n\n:reloj de arena: Api Latency: `{wsping}ms`",
                 "variable1": "``"
             },
-            "sponsor": {
-                "variable1": "`BERO HOST | Our Primary Sponsor`",
-                "variable2": "`Third Sponsor of This Bot is:\\n**BERO-HOST** THE BEST HOSTER\\n<:arrow:832598861813776394> BERO-HOST.de is sponsoring them with some free / cheaper Hosting Methods,\\n<:arrow:832598861813776394> Thanks to them, we are able to host our Website, Bots and GAME SERVERS\\n<:arrow:832598861813776394> Our suggestion is, if you want to host Bots / Games / Websites, then go to [BERO-HOST.de](http://bero-host.de/?utm_source=bot&utm_medium=cpc&utm_id=milrato)\\n\\n**What they are offering:**\\n<:arrow:832598861813776394> **>>** Minecraft Hosting, CounterStrike: Global Offensive, Garry's Mod, ARK, ARMA 3, ...\\n<:arrow:832598861813776394> **>>** Cheap and fast Domains\\n<:arrow:832598861813776394> **>>** WEBHOSTING\\n<:arrow:832598861813776394> **>>** TEAMSPEAK SERVERS\\n<:arrow:832598861813776394> **>>** Linux & Windows Root Servers\\n\\n[**Discord Server:**](https://discord.bero-host.de)\\n[**Website:**](http://bero-host.de/?utm_source=bot&utm_medium=cpc&utm_id=milrato)\\n[**__SPONSOR LINK!__**](https://milrato.dev/img/paysafecard.png)\\n`",
-                "variable3": "`NEXTNODE | Our Secondary Sponsor`",
-                "variable4": "`<:arrow:832598861813776394> Nextnode is providing us, like BERO-HOST with free Discord Bot-Hosting technologies\\n\\n<:arrow:832598861813776394> If you use the code: **\\`x10\\`** their, then you'll get at least 5% off everything!\\n\\n<:arrow:832598861813776394> Check out their [Website](https://Nextnode.de) and their [Discord](https://discord.gg/GgjJZCyYKD) to get your own Bot too!`"
+            "patrocinador": {
+                "variable1": "`BERO HOST | Nuestro Patrocinador Principal`",
+                "variable2": "`El tercer patrocinador de este bot es:\n**BERO-HOST** EL MEJOR HOSTER\n<:arrow:832598861813776394> BERO-HOST. de los patrocina con algunos métodos de alojamiento gratuitos o más baratos. Gracias a ellos, podemos alojar nuestro sitio web, nuestros bots y nuestros servidores de juegos. Nuestra sugerencia es que, si desea alojar bots, juegos o sitios web, vaya a [BERO-HOST. de](http://bero-host.de/?utm_source=bot&utm_medium=cpc&utm_id=milrato)***Lo que ofrecen:***<:arrow:832598861813776394> **>** Alojamiento de Minecraft, CounterStrike: Global Offensive, Garry's Mod, ARK, ARMA 3, ... \n<:arrow:832598861813776394> **>>** Dominios baratos y rápidos\n<:arrow:832598861813776394> **>** WEBHOSTING\n<:arrow:832598861813776394> **>** SERVIDORES TEAMSPEAK\n<:arrow:832598861813776394> **>** Servidores Raíz Linux y Windows\n[**Servidor Discord:**](https://discord. bero-host.de)\n[**Página Web:**](http://bero-host.de/?utm_source=bot&utm_medium=cpc&utm_id=milrato)\n[**¡Enlace Patrocinador!__**](https://milrato.dev/img/paysafecard.png)\n`",
+                "variable3": "`NEXTNODE | Nuestro Patrocinador Secundario`",
+                "variable4": "`<:arrow:832598861813776394> Nextnode nos está proporcionando, como BERO-HOST con tecnologías gratuitas Discord Bot-Hosting\n\n<:arrow:832598861813776394> Si utiliza el código: **\\Si usas el código: ****, obtendrás al menos un 5% de descuento en todo. Visita su [Sitio Web] (https://Nextnode.de) y su [Discord] (https://discord.gg/GgjJZCyYKD) para conseguir tu propio Bot también.
             },
             "stats": {
-                "title": "💿 The Stats of {botname}",
+                "title": "💿 Las estadísticas de {botname}",
                 "field1": {
-                    "title": "⚙️ GLOBAL Commands used:",
+                    "title": "⚙️ Comandos GLOBALES utilizados:",
                     "value": ">>> `{allcommands} Commands` used\nin **all** Servers"
                 },
                 "field2": {
-                    "title": "🎵 GLOBAL Songs played:",
-                    "value": ">>> `{allsongs} Songs` played in\n**all** Servers"
+                    "title": "🎵 Canciones GLOBALES reproducidas:",
+                    "value": ">>> `{allsongs} Canciones` reproducidas en**todos** los servidores"
                 },
                 "field3": {
-                    "title": "⚙️ SERVER Commands used:",
-                    "value": ">>> `{guildcommands} Commands` used in\n**this** Server"
+                    "title": "⚙️ SERVER Comandos utilizados:",
+                    "value": ">>> `{guildcommands} Comandos utilizados en este servidor".
                 },
                 "field4": {
-                    "title": "🎵 SERVER Songs played:",
-                    "value": ">>> `{guildsongs} Songs` played in\n**this** Server"
+                    "title": "🎵 SERVER Canciones reproducidas:",
+                    "value": ">>> `{guildsongs} Canciones reproducidas en este servidor".
                 },
                 "variablex_1": "`\\u200b`", "variable1": "`\\u200b`",
                 "variable2": "``"
             },
-            "support": {
-                "title": ":tickets: You need help? **JOIN OUR SUPPORT SERVER**",
-                "variable1": "`**[Invite Public Bot](https://discord.com/api/oauth2/authorize?client_id=784364932149280778&permissions=8&scope=bot)  •  [WEBSITE](https://milrato.dev)  •  [Support Server/Get your Own Bot](https://discord.com/invite/milrato)**`",
+            "soporte": {
+                "title": ":tickets: ¿Necesitas ayuda? **ÚNETE A NUESTRO SERVIDOR DE SOPORTE**",
+                "variable1": "`**[Invitar Bot Público](https://discord.com/api/oauth2/authorize?client_id=784364932149280778&permissions=8&scope=bot)  - WEBSITE](https://milrato.dev) - [Support Server/Get your Own Bot](https://discord.com/invite/milrato)**`",
                 "variable2": "-",
                 "variable3": "``"
             },
             "uptime": {
-                "TIME NOT NEEDED": "",
+                "TIEMPO NO NECESARIO": "",
                 "variable1": "`:white_check_mark: **${client.user.username}** Uptime`",
-                "variable2": "`\\`\\`\\`css\\n${duration(client.uptime).map(i=> `${i}`).join(`︲`)}\\`\\`\\``",
-                "variablex_3": "`**Date Launched**`", "variable3":"moment(timestamp).format(`LLLL`)",
+                "variable2": "`\\\`{css\\\n${duration(client.uptime).map(i=> `${i}`).join(`︲`)}\\`",
+                "variablex_3": "`**Fecha de lanzamiento**`", "variable3": "moment(timestamp).format(`LLLL`)",
                 "variable4": "``"
             }
         },
@@ -130,280 +130,280 @@
             "autoplay": {
                 "enabled": {
                     "title": "**Successfully __Enabled__ AUTOPLAY MODE**",
-                    "description": "**I will now automatically add a Song when the Queue get's Empty (overwrites afk-Mode)!**"
+                    "description": "**¡Ahora añadiré automáticamente una canción cuando la cola esté vacía (sobreescribe el modo afk)!**"
                 },
                 "disabled": {
                     "title": "**Successfully __Disabled__ AUTOPLAY MODE**",
-                    "description": "**I will now not automatically add a Song when the Queue get's Empty (overwrites afk-Mode)!**"
+                    "description": "**¡Ahora no añadiré automáticamente una canción cuando la cola esté vacía (sobrescribe el modo afk)!**"
                 },
                 "variable1": "`${player.get(`autoplay`) ? client.la[ls].cmds.music.autoplay.enabled.title : client.la[ls].cmds.music.autoplay.disabled.title}`",
                 "variable2": "`${player.get(`autoplay`) ? client.la[ls].cmds.music.autoplay.enabled.description : client.la[ls].cmds.music.autoplay.disabled.description}`",
                 "variable3": "``"
             },
             "clearqueue": {
-                "title": "🗑 **Cleared the Queue!**",
+                "title": "🗑 **¡Limpia la cola!**",
                 "variable1": "``"
             },
             "forceskip": {
-                "title": "⏹️ **Stopped playing and left your Channel!**",
-                "title2": "⏭ **Skipped the current Track!**",
-                "variable1": "`Channel: <#${player.voiceChannel}>`",
+                "title": "⏹️ **¡Dejó de jugar y abandonó su canal!**",
+                "title2": "⏭ **¡Salió de la Pista actual!**",
+                "variable1": "`Canal: <#${player.voiceChannel}>``",
                 "variable2": "``"
             },
             "forward": {
-                "allowed": "❌ **You may forward for `1` - `{duration}` Seconds!**",
-                "title": "👍 **Forwarded the Song**",
-                "description": "**Forwarded for `{amount} Seconds` to: `{time}`**",
-                "field": "⌛ **Progress:**",
+                "allowed": "❌ **¡Puede reenviar durante `1` - `{duración}` Segundos!**",
+                "title": "👍 **Reenvía la canción**",
+                "description": "**Reenviada durante `{amount} Segundos` a: `{time}`**",
+                "field": "⌛ **Progreso:**",
                 "variable1": "``"
             },
             "grab": {
-                "author": "Saved Song:",
-                "field1": "⌛ **Duration:**",
-                "field2": "💯 **Song By:**",
-                "field3": "🔄 **Queue length:**",
+                "author": "canción guardada:",
+                "field1": "⌛ **Duración:**",
+                "field2": "💯 **Canción por:**",
+                "field3": "🔄 **Longitud de la cola:**",
                 "field4": "🎶 **Play it:**",
-                "field5": "🔎 **Saved in:**",
-                "footer": "Requested by: {usertag} ・ in: {guild}",
-                "variable1": "`${player.playing ? `▶` : `⏸`} **${player.queue.current.title}**`",
+                "field5": "🔎 **Guardado en:**",
+                "pie de página": "Solicitado por: {usertag} ・ en: {guild}",
+                "variable1": "`${player.playing ? `▶` : `⏸`} **${player.queue.current.title}**``",
                 "variable2": "``"
             },
             "join": {
-                "title": "👍 **Joined and connected to your Talk!**",
+                "title": "👍 **¡Unido y conectado a tu Talk!**",
                 "variable1": "`Channel: <#${player.voiceChannel}>`",
-                "variable2": "`Channel: <#${player.voiceChannel}>`",
-                "variable3": "`Channel: <#${player.voiceChannel}>`",
+                "variable2": "`Channel: <#${player.voiceChannel}>``",
+                "variable3": "`Channel: <#${player.voiceChannel}>``",
                 "variable4": "``"
             },
             "jump": {
-                "error1": "❌ **Please include to which track you want to Jump**",
-                "error2": "❌ **It has to be a `Queue Number`**",
-                "error3": "❌ **That Song is not in the Queue**!",
-                "title": "👍 **Jumped to the: `{number}.` Song**",
-                "description": "⏭ **Skipped `{number}` Songs!**",
-                "variable1": "`${client.la[ls].common.example}: \\`${prefix}jump ${player.queue.size - 2 <= 0 ? player.queue.size : player.queue.size - 2 }\\``",
+                "error1": "❌ **Por favor, incluya a qué pista quiere Saltar**",
+                "error2": "❌ **Tiene que ser un `Número de cola`**",
+                "error3": "❌ **¡Esa canción no está en la cola**!",
+                "title": "👍 **Saltó a la: `{número}.` Canción**",
+                "description": "⏭ **¡Saltó `{number}` Canciones!**",
+                "variable1": "`${client.la[ls].common.example}: \_${prefix}jump ${player.queue.size - 2 <= 0 ? player.queue.size : player.queue.size - 2 }\\``",
                 "variable2": "``"
             },
             "loop": {
-                "errortitle": "❌ **Please add your Looping Method!**",
+                "errortitle": "❌ **¡Por favor, añade tu método de bucle!**",
                 "errordescription": "`loop song` / `loop queue` / `loop off`",
                 "track": {
-                    "disabled": "❌ **Disabled the Track Repeat mode!**",
-                    "enabled": "👍 **Enabled the Track Repeat mode!**"
+                    "disabled": "❌ **¡Desactivado el modo de repetición de pista!**",
+                    "enabled": "👍 **¡Habilitado el modo de repetición de pista!**"
                 },
                 "queue": {
-                    "disabled": "❌ **Disabled the Queue Repeat mode!**",
-                    "enabled": "👍 **Enabled the Queue Repeat mode!**"
+                    "disabled": "❌ **¡Desactivado el modo de Repetición de Cola!**",
+                    "enabled": "👍 **¡Habilitado el modo de repetición de cola!**"
                 },
-                "andsong": "❌ **And disabled the Song Repeat Mode!**",
-                "andqueue": "❌ **And disabled the Queue Repeat Mode!**",
+                "andsong": "❌ **¡Desactivado el modo Repetición de canción!**",
+                "andqueue": "❌ **¡Y desactivado el modo de repetición de cola!**",
                 "variable1": "``"
             },
             "lyrics": {
-                "nolyrics": "❌ **No Lyrics found!**",
-                "searching": "🔎 **Searching lyrics for: `{title}`**",
-                "found": "📃 **Lyrics for:** `{title}`",
+                "nolyrics": "❌ **¡No se han encontrado letras!**",
+                "searching": "🔎 **Buscando letra para: `{title}`**",
+                "encontrado": "📃 **Lyrics for:** `{title}`",
                 "variable1": "`\\u200b`",
                 "variable2": "``"
             },
-            "move": {
-                "variable1": "`${emoji.msg.ERROR} | Wrong Command Usage!`",
-                "variable2": "`Usage: \\`${prefix}move <from> <to>\\`\\nExample: \\`${prefix}move ${player.queue.size - 2 <= 0 ? player.queue.size : player.queue.size - 2 } 1\\``",
-                "variable3": "`${emoji.msg.ERROR} | Wrong Command Usage!`",
-                "variable4": "`Usage: \\`${prefix}move <from> <to>\\`\\nExample: \\`${prefix}move ${player.queue.size - 2 <= 0 ? player.queue.size : player.queue.size - 2 } 1\\``",
-                "variable5": "`${emoji.msg.ERROR} | Error Your Input must be a Number greater then \\`1\\` and smaller then \\`${player.queue.length}\\``",
-                "variable6": "`Mmoved the Song in the Queue from Position \\`${args[0]}\\` to Position: \\`${args[1]}\\``",
-                "variable7": "`[${song.title}](${song.uri}) - \\`${format(song.duration)}\\` - requested by **${song.requester.tag}**`",
+            "mover": {
+                "variable1": "`${emoji.msg.ERROR} | ¡Uso incorrecto del comando!`",
+                "variable2": "`Uso: \_${prefijo}mover <desde> <hacia>" "Ejemplo: \\mover ${player.queue.size - 2 <= 0 ? player.queue.size : player.queue.size - 2 } 1\\``",
+                "variable3": "`${emoji.msg.ERROR} | ¡Uso incorrecto del comando!`",
+                "variable4": "`Uso: \\Ejemplo: \\mover ${player.queue.size - 2 <= 0 ? player.queue.size : player.queue.size - 2 } 1\\``",
+                "variable5": "`${emoji.msg.ERROR} | Error Your Input must be a Number greater than \\\\1\\\` and smaller than \\\${player.queue.length}\\``",
+                "variable6": "`Se ha movido la canción de la cola de la posición \\${args[0]}\`` a la posición \\${args[1]}\\``",
+                "variable7": "`[${song.title}](${song.uri}) - \\${format(song.duration)}\\` - requested by **${song.requester.tag}**`",
                 "variable8": "``"
             },
             "moveme": {
-                "variable1": "`${emoji.msg.ERROR} I am connected nowhere`",
-                "variable2": "`${emoji.msg.ERROR} Please Connect first`",
-                "variable3": "`${emoji.msg.ERROR} The Channel is full, I cant move you`",
-                "variable4": "`${emoji.msg.ERROR} You are already in my channel `",
+                "variable1": "`${emoji.msg.ERROR} No estoy conectado a ninguna parte`",
+                "variable2": "`${emoji.msg.ERROR} Por favor, conéctese primero`",
+                "variable3": "`${emoji.msg.ERROR} El canal está lleno, no puedo moverte`",
+                "variable4": "`${emoji.msg.ERROR} Ya estás en mi canal `",
                 "variable5": "``"
             },
             "nowplaying": {
-                "variable1": "`${emoji.msg.ERROR} There is nothing playing`",
+                "variable1": "`${emoji.msg.ERROR} No se está reproduciendo nada`",
                 "variable2": "`${player.playing ? `${emoji.msg.resume}` : `${emoji.msg.pause}`} **${player.queue.current.title}**`",
                 "variable3": "``"
             },
             "pause": {
-                "variable1": "`${emoji.msg.ERROR} The song is already paused!`",
-                "variable2": "`You can resume it with: \\`${prefix}resume\\``",
+                "variable1": "`${emoji.msg.ERROR} La canción ya está en pausa!`",
+                "variable2": "`Puedes reanudarla con: \\`${prefix}resume\\``",
                 "variable3": "``"
             },
             "play": {
-                "variable1": "`${emoji.msg.ERROR} You need to give me a URL or a Search term.`",
+                "variable1": "`${emoji.msg.ERROR} Tienes que darme una URL o un término de búsqueda.`",
                 "variable2": "``"
             },
             "playlist": {
-                "variable1": "`${emoji.msg.ERROR} You need to give me a URL or a search term.`",
+                "variable1": "`${emoji.msg.ERROR} Tienes que darme una URL o un término de búsqueda.`",
                 "variable2": "``"
             },
             "playmusicmix": {
-                "variable1": "`:notes: __**Other Options could be:**__`",
-                "variable2": "`>>> \\`\\`\\`blues, charts, chill, default, heavymetal, gaming, jazz, metal, magic-release, ncs, nocopyright, oldgaming, pop, remixes, rock, strange-fruits-gaming\\`\\`\\``",
-                "variablex_3": "`:muscle: **To play a different one type:**`", "variable3": "`> \\`${prefix}playmusicmix <NAME>\\`\\n💡 **Example:**\\n> \\`${prefix}playmusicmix pop\\``",
+                "variable1": "`:notas: __**Otras opciones podrían ser:**__`",
+                "variable2": "`>>> \\_\_\_\_blues, charts, chill, default, heavymetal, gaming, jazz, metal, magic-release, ncs, nocopyright, oldgaming, pop, remixes, rock, strange-fruits-gaming\_\_\_\_``",
+                "variablex_3": "`:músculo: **Para jugar a otro tipo:**`", "variable3": "`> \${prefix}playmusicmix <NAME>\${prefix}\N💡 **Example:**\\n> \${prefix}playmusicmix pop\\\``",
                 "variable4": "``"
             },
             "playsc": {
-                "variable1": "`${emoji.msg.ERROR} You need to give me a URL or a search term.`",
+                "variable1": "`${emoji.msg.ERROR} Tienes que darme una URL o un término de búsqueda.`",
                 "variable2": "``"
             },
             "playskip": {
-                "variable1": "`${emoji.msg.ERROR} You need to give me a URL or a Search term.`",
+                "variable1": "`${emoji.msg.ERROR} Tienes que darme una URL o un término de búsqueda.`",
                 "variable2": "``"
             },
             "playskipsc": {
-                "variable1": "`${emoji.msg.ERROR} You need to give me a URL or a Search term.`",
+                "variable1": "`${emoji.msg.ERROR} Tienes que darme una URL o un término de búsqueda.`",
                 "variable2": "``"
             },
             "playsongoftheday": {
                 "variable1": "``"
             },
             "playtop": {
-                "variable1": "`${emoji.msg.ERROR} You need to give me a URL or a Search term.`"
+                "variable1": "`${emoji.msg.ERROR} Tienes que darme una URL o un término de búsqueda.`"
             },
             "queue": {
-                "variablex_1": "`**0) CURRENT TRACK**`", "variable1": "`**${player.queue.current.title.substr(0, 60)}** - \\`${player.queue.current.isStream ? `LIVE STREAM` : format(player.queue.current.duration).split(` | `)[0]}\\`\\n*request by: ${player.queue.current.requester.tag}*`",
-                "variable2": "`${emoji.msg.ERROR} No tracks in the queue`",
-                "variablex_3": "`**0) CURRENT TRACK**`", "variable3": "`**${player.queue.current.title.substr(0, 60)}** - \\`${player.queue.current.isStream ? `LIVE STREAM` : format(player.queue.current.duration).split(` | `)[0]}\\`\\n*request by: ${player.queue.current.requester.tag}*`",
-                "variablex_4": "`**0) CURRENT TRACK**`", "variable4": "`**${player.queue.current.title.substr(0, 60)}** - \\`${player.queue.current.isStream ? `LIVE STREAM` : format(player.queue.current.duration).split(` | `)[0]}\\`\\n*request by: ${player.queue.current.requester.tag}*`",
+                "variablex_1": "`**0) PISTA ACTUAL**`", "variable1": "`**${player.queue.current.title.substr(0, 60)}** - `**${player.queue.current.isStream ? `LIVE STREAM` : format(player.queue.current.duration).split(` | `)[0]} { {\n*request by: ${player.queue.current.requester.tag}*`",
+                "variable2": "`${emoji.msg.ERROR} No hay pistas en la cola`",
+                "variablex_3": "`**0) PISTA ACTUAL**`", "variable3": "`**${player.queue.current.title.substr(0, 60)}** - `**${player.queue.current.isStream ? `LIVE STREAM` : format(player.queue.current.duration).split(` | `)[0]} { {\n*request by: ${player.queue.current.requester.tag}*`",
+                "variablex_4": "`**0) PISTA ACTUAL**`", "variable4": "`**${player.queue.current.title.substr(0, 60)}** - `**${player.queue.current.isStream ? `LIVE STREAM` : format(player.queue.current.duration).split(` | `)[0]} { {\n*request by: ${player.queue.current.requester.tag}*`",
                 "variable5": "``"
             },
             "queuestatus": {
-                "variable1": "`Queue Information of **${message.guild.name}**`",
-                "variable2": "`**Connected to:** <#${player.voiceChannel}> **And bound to:** <#${player.textChannel}>`",
-                "variablex_3": "`${emoji.msg.autoplay_mode} Autoplay`", "variable3": "`\\`\\`\\`${player.get(`autoplay`) ? `✅ Enabled` : `${emoji.msg.ERROR} Disabled`}\\`\\`\\``",
-                "variablex_4": "`${emoji.msg.disk} Current Track: `", "variable4": "`${player.queue && player.queue.current ? `${player.playing ? `${emoji.msg.resume}` : `${emoji.msg.pause}`} [**${player.queue.current.title}**](${player.queue.current.uri})` : `\\`\\`\\`${emoji.msg.ERROR} Nothing Playing\\`\\`\\``}`",
-                "variablex_5": "`${emoji.msg.time} Progress: `", "variable5": "player.queue && player.queue.current ? createBar(player) : `\\`\\`\\`${emoji.msg.ERROR} Nothing Playing\\`\\`\\``",
+                "variable1": "`Información de cola de **${mensaje.gremio.nombre}**`",
+                "variable2": "`**Conectado a:** <#${player.voiceChannel}> **Y vinculado a:** <#${player.textChannel}>``",
+                "variablex_3": "`${emoji.msg.autoplay_mode} Autoplay`", "variable3": "`${player.get(`autoplay`) ? `✅ Habilitado` : `${emoji.msg.ERROR} Disabled`}\\`\\`\\``",
+                "variablex_4": "`${emoji.msg.disk} Pista actual: `", "variable4": "`${player.queue && player.queue.current ? `${player.playing ? `${emoji.msg.resume}` : `${emoji.msg.pause}`} [**${player.queue.current.title}**](${player.queue.current.uri})` : `\\_\_\_\_\_\_$${emoji.msg.ERROR} Nada jugando",
+                "variablex_5": "`${emoji.msg.time} Progreso: `", "variable5": "player.queue && player.queue.current ? createBar(player) : `${emoji.msg.ERROR} Nada jugando",
                 "variable6": "``"
             },
             "radio": {
-                "variable1": "`${emoji.msg.ERROR} Not a valid radio station`",
-                "variable2": "`Please use a Number between \\`1\\` and \\`183\\``",
+                "variable1": "`${emoji.msg.ERROR} No es una emisora de radio válida`",
+                "variable2": "`Por favor, utilice un número entre \\\1\\` y \\183\\\``",
                 "variable3": "`${emoji.msg.ERROR} Volume Number out of Range`",
-                "variable4": "`Please use a Number between \\`1\\` and \\`150\\``",
-                "variable5": "`${emoji.msg.ERROR} Radio Station not found`",
-                "variable6": "`Please use a Station between \\`1\\` and \\`183\\``",
+                "variable4": "`Por favor, utilice un número entre \\\1\\` y \\150\\``",
+                "variable5": "`${emoji.msg.ERROR} Emisora de radio no encontrada`",
+                "variable6": "`Por favor, utilice una emisora entre \\\`1\\` y \\`183\\``",
                 "variable7": "``"
             },
-            "reconnect": {
-                "variable1": "`No setup done yet? Try it with \\`${prefix}setup-radio\\``",
-                "variable2": "`No setup done yet? Try it with \\`${prefix}setup-radio\\``",
+            "reconectar": {
+                "variable1": "`¿Aún no has configurado? Inténtalo con \${prefix}setup-radio\\``",
+                "variable2": "¿Todavía no lo has configurado? Try it with \\${prefix}setup-radio\\``",
                 "variable3": "``"
             },
             "removedupes": {
-                "variable1": "`${emoji.msg.cleared} I removed the track at position: \\`${Number(args[0])}\\``",
+                "variable1": "`${emoji.msg.cleared} eliminé la pista en la posición: \\`${Number(args[0])}\\``",
                 "variable2": "``"
             },
             "removetrack": {
                 "variable1": "`${emoji.msg.ERROR} Please add the Track you want to remove!`",
-                "variable2": "`Example: \\`removetrack ${player.queue.size - 2 <= 0 ? player.queue.size : player.queue.size - 2 }\\``",
-                "variable3": "`${emoji.msg.ERROR} It has to be a valid Queue Number!`",
-                "variable4": "`Example: \\`removetrack ${player.queue.size - 2 <= 0 ? player.queue.size : player.queue.size - 2 }\\``",
+                "variable2": "`Ejemplo: \\``removetrack ${player.queue.size - 2 <= 0 ? player.queue.size : player.queue.size - 2 }\\``",
+                "variable3": "`${emoji.msg.ERROR} Tiene que ser un número de cola válido!`",
+                "variable4": "`Ejemplo: \\``removetrack ${player.queue.size - 2 <= 0 ? player.queue.size : player.queue.size - 2 }\\``",
                 "variable5": "`${emoji.msg.ERROR} Your Song must be in the Queue!`",
-                "variable6": "`Example: \\`removetrack ${player.queue.size - 2 <= 0 ? player.queue.size : player.queue.size - 2 }\\``",
-                "variable7": "`${emoji.msg.cleared} I removed the track at position: \\`${Number(args[0])}\\``",
+                "variable6": "`Ejemplo: \\``removetrack ${player.queue.size - 2 <= 0 ? player.queue.size : player.queue.size - 2 }\\``",
+                "variable7": "`${emoji.msg.cleared} eliminé la pista en la posición: \\`${Number(args[0])}\\``",
                 "variable8": "``"
             },
             "removevoteskip": {
-                "variable1": "`Removed your Vote!`",
-                "variable2": "`There are now: \\`${player.get(`votes`)}\\` of \\`${voteamount}\\` needed Votes`",
-                "variable3": "`${emoji.msg.ERROR} You havn't voted yet!!`",
-                "variable4": "`There are: \\`${player.get(`votes`)}\\` of \\`${voteamount}\\` needed Votes`",
+                "variable1": "`¡Quitó su Voto!`",
+                "variable2": "`Ahora hay \\${player.get(`votes`)}\` de \${voteamount}\\` votos necesarios`",
+                "variable3": "`${emoji.msg.ERROR} Aún no has votado!!!`",
+                "variable4": "`Hay \\${player.get(`votes`)}\` de \${voteamount}\` votos necesarios`",
                 "variable5": "`${emoji.msg.ERROR} Cannot remove your Vote!`",
-                "variable6": "`Because ther is no DJ-Role Setup created yet, create it by typing \\`${prefix}adddj @DJ-Setup\\``",
+                "variable6": "`Because ther is no DJ-Role Setup created yet, create it by typing \\\${prefix}adddj @DJ-Setup\\``",
                 "variable7": "``"
             },
             "restart": {
                 "variable1": "``"
             },
-            "resume": {
-                "variable1": "`${emoji.msg.ERROR} The song is already resumed!`",
-                "variable2": "`You can pause it with: \\`${prefix}pause\\``",
+            "reanudar": {
+                "variable1": "`${emoji.msg.ERROR} La canción ya se ha reanudado!`",
+                "variable2": "`Puedes pausarla con: \\`${prefix}pause\\``",
                 "variable3": "``"
             },
-            "rewind": {
-                "variable1": "`${emoji.msg.ERROR} You may rewind for \\`1\\` - \\`${player.queue.current.duration}\\``",
-                "variable2": "`${emoji.msg.rewind} Rewinded the song for \\`${args[0]} Seconds\\` to: ${format(Number(player.position))}`",
+            "rebobinar": {
+                "variable1": "`${emoji.msg.ERROR} You may rewind for \\`1\\\` - \\\${player.queue.current.duration}\``",
+                "variable2": "`${emoji.msg.rewind} Rewinded the song for \\${args[0]} Segundos\` a: ${format(Number(player.position))}`",
                 "variable3": "``"
             },
             "search": {
-                "variable1": "`${emoji.msg.ERROR} You need to give me a URL or a search term.`",
+                "variable1": "`${emoji.msg.ERROR} Tienes que darme una URL o un término de búsqueda.`",
                 "variable2": "``"
             },
             "searchplaylist": {
-                "variable1": "`THIS CMD IS NOT FINISHED YET!`",
+                "variable1": "`¡ESTE CMD AÚN NO HA TERMINADO!`",
                 "variable2": "``"
             },
             "searchradio": {
-                "variable1": "`${emoji.msg.ERROR} What should be the search Type`",
-                "variable2": "`Usage: \\`${prefix}searchradio <TYPE> <Seach Query>\\`\\nValid Types: \\`country\\`, \\`city\\`, \\`name\\`, \\`genre\\`\\nExample: \\`${prefix}searchradio tag jazz\\`\\nExample: \\`${prefix}searchradio state Austria\\``",
-                "variable3": "`${emoji.msg.ERROR} What should I search for?`",
-                "variable4": "`Usage: \\`${prefix}searchradio <TYPE> <Seach Query>\\`\\nValid Types: \\`country\\`, \\`city\\`, \\`name\\`, \\`genre\\`\\nExample: \\`${prefix}searchradio tag jazz\\`\\nExample: \\`${prefix}searchradio state Austria\\``",
+                "variable1": "`${emoji.msg.ERROR} Cuál debería ser el tipo de búsqueda`",
+                "variable2": "`Uso: \\`${prefix}searchradio <TYPE> <Seach Query> Tipos válidos: \\País, Ciudad, Nombre, Género, Ejemplo: \\Ejemplo: \\"variable3": "variable3": "variable3": "variable3": "variable3": "variable3": "variable3": "variable3": "variable3": "variable3",
+                "variable3": "`${emoji.msg.ERROR} ¿Qué debo buscar?`",
+                "variable4": "`Uso: \\`${prefix}searchradio <TYPE> <Seach Query> Tipos válidos: \\País, Ciudad, Nombre, Género, Ejemplo: \\Ejemplo: \\"variable5": "variable5": "variable5": "variable5": "variable5": "variable5": "variable5": "variable5": "variable5": "variable5",
                 "variable5": "`${emoji.msg.ERROR} What should be the search Type`",
-                "variable6": "`Usage: \\`${prefix}searchradio <TYPE> <Seach Query>\\`\\nValid Types: \\`country\\`, \\`city\\`, \\`name\\`, \\`genre\\`\\nExample: \\`${prefix}searchradio tag jazz\\`\\nExample: \\`${prefix}searchradio state Austria\\``",
-                "variable7": "`Pick your Radio with the `INDEX Number``",
+                "variable6": "`Usage \\`${prefix}searchradio <TYPE> <Seach Query> Tipos válidos: \\País, Ciudad, Nombre, Género, Ejemplo: \\Ejemplo: |${prefix}searchradio state Austria\\\``",
+                "variable7": "`Escoge tu radio con el `Número de índice``",
                 "variable8": "`${emoji.msg.ERROR} You didn't provide a selection`",
-                "variable9": "'${emoji.msg.ERROR} Cancelled selection.'",
+                "variable9": "'${emoji.msg.ERROR} Selección cancelada`",
                 "variable10": "`${emoji.msg.ERROR} The number you provided is not a Number within (1-${counter}).`",
                 "variable11": "`${emoji.msg.ERROR} The number you provided too small or too big (1-${counter}).`",
                 "variable12": "``",
                 "variable13": "``"
             },
             "searchsc": {
-                "variable1": "`${emoji.msg.ERROR} You need to give me a URL or a search term.`",
+                "variable1": "`${emoji.msg.ERROR} Tienes que darme una URL o un término de búsqueda.`",
                 "variable2": "``"
             },
             "searchsimilar": {
                 "variable1": "``"
             },
             "seek": {
-                "variable1": "`${emoji.msg.ERROR} You may seek from \\`0\\` - \\`${player.queue.current.duration}\\``",
-                "variable2": "`Seeked song to: ${format(Number(args[0]) * 1000)}`",
+                "variable1": "`${emoji.msg.ERROR} You may seek from \\ {0} - \ {$ {player.queue.current.duration} {\}",
+                "variable2": "`Canción buscada a: ${format(Number(args[0]) * 1000)}`",
                 "variable3": "``"
             },
             "shuffle": {
                 "variable1": "``"
             },
             "skip": {
-                "title": "⏹️ **Stopped playing and left your Channel!**",
-                "title2": "⏭ **Skipped the current Track!**",
-                "variable1": "`Channel: <#${player.voiceChannel}>`",
+                "title": "⏹️ **¡Dejó de jugar y abandonó su canal!**",
+                "title2": "⏭ **¡Saltó la Pista actual!**",
+                "variable1": "`Canal: <#${player.voiceChannel}>``",
                 "variable2": "``"
             },
             "stop": {
-                "variable1": "`${emoji.msg.stop} Stopped and left your Channel`",
-                "variable2": "`${emoji.msg.ERROR} **No song is currently playing in this guild.**`",
-                "variable3": "`${emoji.msg.ERROR} **No song is currently playing in this guild.**`",
+                "variable1": "`${emoji.msg.stop} Detenido y abandonado su canal`",
+                "variable2": "`${emoji.msg.ERROR} **No se está reproduciendo ninguna canción en este gremio.**`",
+                "variable3": "`${emoji.msg.ERROR} **No se está reproduciendo ninguna canción en este gremio.**`",
                 "variable4": "``"
             },
             "unshuffle": {
-                "variable1": "`${emoji.msg.ERROR} You haven't shuffled this Queue yet!`",
-                "variable2": "`To shuffle it type: \\`${prefix}shuffle\\``",
-                "variable3": "`${emoji.msg.shuffle} **Un**shuffled the Queue`",
+                "variable1": "`${emoji.msg.ERROR} No tienes el modo aleatorio todavía!`",
+                "variable2": "`Para barajar escribe: \\`${prefix}shuffle``",
+                "variable3": "`${emoji.msg.shuffle} **Un**shuffle de la cola`",
                 "variable4": "``"
             },
-            "volume": {
-                "variable1": "`${emoji.msg.ERROR} You may set the volume \\`1\\` - \\`150\\``",
-                "variable2": "`**Current volume: \\`${player.volume}%\\`**`",
-                "variable3": "`${emoji.msg.ERROR} You may set the volume \\`1\\` - \\`150\\``",
-                "variable4": "`**Current volume: \\`${player.volume}%\\`**`",
-                "variable5": "`${emoji.msg.raise_volume} Volume set to: \\`${player.volume} %\\``",
-                "variable6": "`**Current volume: \\`${player.volume}%\\`**`",
+            "volumen": {
+                "variable1": "`${emoji.msg.ERROR} Puede ajustar el volumen \ {\i1\i} - {\i}",
+                "variable2": "`**Volumen actual: \\`${player.volume}%\\`**`",
+                "variable3": "`${emoji.msg.ERROR} You may set the volume \\`1\\\` - \\\`150\\``",
+                "variable4": "`**Volumen actual: \\`${player.volume}%\\`**`",
+                "variable5": "`${emoji.msg.raise_volume} Volumen ajustado a: \\${player.volume} %\\\``",
+                "variable6": "`**Volumen actual: \\`${player.volume}%\\`**`",
                 "variable7": "``"
             },
             "voteskip": {
                 "variable1": "`${emoji.msg.SUCCESS} Added your Vote!`",
-                "variable2": "`There are now: \\`${player.get(`votes`)}\\` of \\`${voteamount}\\` needed Votes\\n\\n> Amount reached! Skipping ⏭`",
+                "variable2": "`Ahora hay \\${player.get(`votes`)}\` de \${voteamount}\` votos necesarios ¡Votes\n\n> Cantidad alcanzada! Saltando ⏭`",
                 "variable3": "`${emoji.msg.SUCCESS} Added your Vote!`",
-                "variable4": "`There are now: \\`${player.get(`votes`)}\\` of \\`${voteamount}\\` needed Votes`",
+                "variable4": "`Ahora hay \\${player.get(`votes`)}\` de \${voteamount}\\` votos necesarios`",
                 "variable5": "`${emoji.msg.ERROR} You have already Voted!!`",
-                "variable6": "`There are: \\`${player.get(`votes`)}\\` of \\`${voteamount}\\` needed Votes`",
-                "variable7": "`${emoji.msg.SUCCESS} ${emoji.msg.stop} Stopped and left your Channel`",
-                "variable8": "`${emoji.msg.SUCCESS} ${emoji.msg.skip_track} Skipped to the next Song`",
+                "variable6": "`Hay \\${player.get(`votes`)}\` de \${voteamount}\\` votos necesarios`",
+                "variable7": "`${emoji.msg.SUCCESS} ${emoji.msg.stop} Parado y me fui del canal`",
+                "variable8": "`${emoji.msg.SUCCESS} ${emoji.msg.skip_track} Salté a la siguiente canción`",
                 "variable9": "``"
             },
             "addprevious": {
